@@ -1,0 +1,7 @@
+venv/
+crypto.db
+*.pkl
+__pycache__/
+*.pyc
+.env
+.vscode/
