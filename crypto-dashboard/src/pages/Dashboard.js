@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { getTokens } from "../services/api";
-import MarketOverview from "../components/MarketOverview";
 import Card from "../components/Card";
 import RiskGauge from "../components/RiskGauge";
 import PriceChart from "../components/PriceChart";
@@ -34,9 +33,11 @@ function Dashboard() {
     }
   };
 
+/* eslint-disable react-hooks/exhaustive-deps */
+
   useEffect(() => {
     loadTokens();
-  }, []);
+  }, [loadTokens]);
 
   return (
     <div className="min-h-screen bg-gray-900 text-white p-6">
