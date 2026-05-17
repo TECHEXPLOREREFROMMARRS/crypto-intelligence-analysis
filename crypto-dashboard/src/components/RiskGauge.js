@@ -21,8 +21,6 @@ function RiskGauge({ coin = "ethereum" }) {
 
 
 
-  if (risk.risk_level === "medium") color = "text-yellow-400";
-  if (risk.risk_level === "high") color = "text-red-400";
 
 return (
   <div style={{ textAlign: "center" }}>
