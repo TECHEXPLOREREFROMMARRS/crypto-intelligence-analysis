@@ -19,7 +19,7 @@ function RiskGauge({ coin = "ethereum" }) {
     return <p className="text-gray-400 text-center">Loading risk...</p>;
   }
 
-  let color = "text-green-400";
+
 
   if (risk.risk_level === "medium") color = "text-yellow-400";
   if (risk.risk_level === "high") color = "text-red-400";

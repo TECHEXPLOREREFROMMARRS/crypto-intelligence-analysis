@@ -18,20 +18,20 @@ function Dashboard() {
   const [coin, setCoin] = useState("");
   const [tokens, setTokens] = useState([]);
 
-  const loadTokens = async () => {
-    try {
-      const res = await getTokens();
-      const list = res.data;
+const loadTokens = React.useCallback(async () => {
+  try {
+    const res = await getTokens();
+    const list = res.data;
 
-      setTokens(list);
+    setTokens(list);
 
-      if (list.length > 0 && !coin) {
-        setCoin(list[0].name);
-      }
-    } catch (err) {
-      console.error("Failed to load tokens", err);
+    if (list.length > 0 && !coin) {
+      setCoin(list[0].name);
     }
-  };
+  } catch (err) {
+    console.error("Failed to load tokens", err);
+  }
+}, []);
 
 /* eslint-disable react-hooks/exhaustive-deps */
 
