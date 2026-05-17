@@ -31,7 +31,7 @@ const loadTokens = React.useCallback(async () => {
   } catch (err) {
     console.error("Failed to load tokens", err);
   }
-}, []);
+}, [coin]);
 
 /* eslint-disable react-hooks/exhaustive-deps */
 
